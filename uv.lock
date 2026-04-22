@@ -1191,18 +1191,22 @@ name = "machine-failure-prediction-with-mlflow-tracking"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "fastapi" },
     { name = "mlflow" },
     { name = "optuna" },
     { name = "pandas" },
     { name = "torch" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.136.0" },
     { name = "mlflow", specifier = ">=3.11.1" },
     { name = "optuna", specifier = ">=4.8.0" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "torch", specifier = ">=2.11.0" },
+    { name = "uvicorn", specifier = ">=0.45.0" },
 ]
 
 [[package]]

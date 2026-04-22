@@ -1,6 +1,6 @@
-# 🏭 Machine Failure Prediction with MLflow
+# 🏭 Machine Failure Prediction with MLflow + FastAPI
 
-This project builds an end-to-end ML system to predict machine failures using sensor data from Kaggle. It focuses on reproducible experiments, hyperparameter tuning, and deployable model design.
+This project builds an end-to-end ML system to predict machine failures using sensor data from Kaggle. It focuses on reproducible experiments, hyperparameter tuning, and deployable model design with real-time inference API.
 
 ---
 
@@ -9,7 +9,8 @@ This project builds an end-to-end ML system to predict machine failures using se
 - Build a full ML pipeline from scratch (preprocessing → training → evaluation)
 - Track experiments using **MLflow**
 - Optimize models using **Optuna**
-- Deploy a trained model via API
+- Deploy the best trained model using **FastAPI**
+- Enable real-time machine failure prediction via REST API
 
 ---
 
@@ -23,20 +24,25 @@ This project builds an end-to-end ML system to predict machine failures using se
 
 ## 🧠 Workflow
 
-- Data preprocessing (cleaning, scaling, splitting)
+- Data preprocessing (cleaning, scaling, feature selection)
 - Model training (baseline ML models)
 - Hyperparameter tuning with Optuna
 - Experiment tracking with MLflow
-- Model selection based on best metrics
+- Model selection based on best validation metrics
+- Deployment of best model using FastAPI
 
 ---
 
 ## ⚙️ Tech Stack
 
-- Python, Pandas 
+- Python  
+- Pandas  
 - Scikit-learn  
+- PyTorch (if applicable)  
 - MLflow  
-- Optuna   
+- Optuna  
+- FastAPI  
+- Uvicorn  
 
 ---
 
@@ -44,4 +50,17 @@ This project builds an end-to-end ML system to predict machine failures using se
 
 - Logs parameters, metrics, and models  
 - Enables comparison across experiments  
-- MLflow UI used for analysis  
+- MLflow UI used for visualization and model selection  
+- Stores best model artifacts for deployment  
+
+---
+
+## 🚀 Model Deployment (FastAPI)
+
+The best trained model is served using a REST API built with FastAPI.
+
+### ▶️ Run API server
+
+```bash
+uvicorn app:app --reload
+```
