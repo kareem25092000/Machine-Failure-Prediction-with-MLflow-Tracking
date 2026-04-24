@@ -64,3 +64,6 @@ The best trained model is served using a REST API built with FastAPI.
 ```bash
 uvicorn app:app --reload
 ```
+
+### Note
+in `app.py` change `run_id` to your best model experiment id

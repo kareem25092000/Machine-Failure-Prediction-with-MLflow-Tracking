@@ -9,7 +9,9 @@ app = FastAPI()
 
 mlflow.set_tracking_uri("file:./mlruns")
 
+# cahnge this for your best model experiment
 run_id = "9b8836539c6d4e14a88bc364388b9434"
+
 model = mlflow.pytorch.load_model(f"runs:/{run_id}/model")
 model.eval()
 
