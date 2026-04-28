@@ -38,7 +38,7 @@ This project builds an end-to-end ML system to predict machine failures using se
 - Python  
 - Pandas  
 - Scikit-learn  
-- PyTorch (if applicable)  
+- PyTorch  
 - MLflow  
 - Optuna  
 - FastAPI  
